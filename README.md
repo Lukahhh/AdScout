@@ -159,23 +159,30 @@ This script automates the process of identifying sponsored posts on Facebook usi
 
 # Running the code
 
-1. Start Chrome in Remote Debugging Mode:
+## 1. Start Chrome in Remote Debugging Mode:
 
 `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome_session`
 
  * The reason we use Chrome in Remote Debugging Mode (RDM) is because signing in via a Selenium/ChromeDriver creates a "clean slate" with no cookies or login details, requiring the username and password for the Facebook account you wish to use to be stored in plain text in the script. Earlier versions of this script made use of that but it's insecure, and Facebook constantly asked for a 2FA code requiring human interaction.
 
-2. Sign in to Facebook on the Chrome RDM session
+## 2. Sign in to Facebook on the Chrome RDM session
 
-3. If you've set up a virtual environment, run the appropriate command to activate it:
+## 3. If you've set up a virtual environment, run the appropriate command to activate it:
 
 `source myenv/bin/activate`
 
-4. Run the appropriate script, e.g. for desktop:
+## 4. Run the appropriate script. 
+### For desktop
 
 `python3 desktop_script/adscout_desktop.py`
 
-5. The script will create a new CSV file in the `/csv/` folder if it doesn't already exist. If a CSV file exists, it will amend to that file. 
+### For mobile
+`python3 desktop_script/adscout_desktop.py`
+
+ * **NOTE:** If you're running the mobile script, you need to open the Chrome developer tools and set the device type to "iPhone 14 Pro Max" to ensure you are viewing the Facebook mobile code as opposed to the desktop code. If you don't do this, the script will error out.
+
+### 5. The script will create a new CSV file in the `/csv/` folder if it doesn't already exist. If a CSV file exists, it will amend to that file. 
+
 
 
 # FAQ
