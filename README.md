@@ -30,7 +30,7 @@ AdScout is a side-project for automatically scraping Facebook to locate Sponsore
 
 # Script Overview
 ## Desktop
-This script is designed to automate the process of identifying and analyzing sponsored posts on Facebook. It uses Selenium for web automation, Pytesseract for optical character recognition (OCR), and other Python utilities for file and data handling.
+This script is designed to automate the process of identifying sponsored posts on Facebook. It uses Selenium for web automation, Pytesseract for optical character recognition (OCR), and other Python utilities for file and data handling.
 
 ### Key Components
 
@@ -92,7 +92,7 @@ This script is designed to automate the process of identifying and analyzing spo
 
 
 ## Mobile Web
-This script automates the process of identifying and analyzing sponsored posts on Facebook using Selenium. It captures screenshots of sponsored posts, extracts relevant information, and stores it for further analysis.
+This script automates the process of identifying sponsored posts on Facebook using Selenium. It captures screenshots of sponsored posts, extracts relevant information, and stores it for further analysis.
 
 ### Key Components
 
@@ -163,7 +163,7 @@ This script automates the process of identifying and analyzing sponsored posts o
 
 `/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=/tmp/chrome_session`
 
- * The reason we use Chrome in Remote Debugging Mode (RDM) is because signing in via a Selenium/ChromeDriver creates a "clean slate" with no cookies or login details, requiring the username and password for the Facebook account you wish to use to be stored in plain text in the script. Earlier versions of this script made use of that
+ * The reason we use Chrome in Remote Debugging Mode (RDM) is because signing in via a Selenium/ChromeDriver creates a "clean slate" with no cookies or login details, requiring the username and password for the Facebook account you wish to use to be stored in plain text in the script. Earlier versions of this script made use of that but it's insecure, and Facebook constantly asked for a 2FA code requiring human interaction.
 
 2. Sign in to Facebook on the Chrome RDM session
 
@@ -192,7 +192,7 @@ Probably! I take no responsibility for any breach of Facebook's Terms if you use
 # LICENSE
 MIT License
 
-Copyright (c) 2023 Aaron McDonald
+Copyright (c) 2023 Lukahhh / Aaron McDonald
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
